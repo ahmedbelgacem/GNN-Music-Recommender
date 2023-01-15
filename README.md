@@ -17,5 +17,5 @@ You will then need to run the preprocessing script on the dataset to create the 
 Finally run the train_model script to run the lightGCN model.  
 
 ## Authors:
-[Ahmed Belgacem - Software Engineering graduate from the National Institute of Applied Sciences and Technology (INSAT) and Big Data, Artificial Intelligence master student at Paris Dauphine Tunis.](https://www.linkedin.com/in/ahmedbelgacem/)
-[- Software Engineering graduate from École supérieure privée d'ingénierie et de technologie (Esprit) and Big Data, Artificial Intelligence master student at Paris Dauphine Tunis.](https://www.linkedin.com/in/ahmedbelgacem/](https://www.linkedin.com/in/nizar-masmoudi/)
+[Ahmed Belgacem - Software Engineering graduate from the National Institute of Applied Sciences and Technology (INSAT) and Big Data, Artificial Intelligence master student at Paris Dauphine Tunis.](https://www.linkedin.com/in/ahmedbelgacem/)  
+[Nizar Masmoudi - Software Engineering graduate from École supérieure privée d'ingénierie et de technologie (Esprit) and Big Data, Artificial Intelligence master student at Paris Dauphine Tunis.](https://www.linkedin.com/in/ahmedbelgacem/](https://www.linkedin.com/in/nizar-masmoudi/)
