@@ -6,7 +6,7 @@ from torch_geometric.data import Dataset, Data
 from torch_geometric.loader import DataLoader
 from tqdm.notebook import tqdm
 
-from utils.models import model_trainer as trainer_utils
+from utils.sampling import sample_negative_edges
 
 
 class PlainData(Data):
@@ -55,7 +55,7 @@ def train(model, data, optimizer, num_playlists, k, n_epochs, batch_size):
                   desc='Epoch [{:>2}/{:>2}] - {:>30}'.format(epoch, n_epochs, 'Training')) as tbatch:
             for i, batch in enumerate(tbatch):
                 optimizer.zero_grad()
-                negatives = trainer_utils.sample_negative_edges(batch, num_playlists, num_nodes)
+                negatives = sample_negative_edges(batch, num_playlists, num_nodes)
                 batch, negatives = batch.to(device), negatives.to(device)
                 pos_rankings = model(train_mp.edge_index, batch.edge_index)  # Positive samples
                 neg_rankings = model(train_mp.edge_index, negatives.edge_index)  # Negative samples
