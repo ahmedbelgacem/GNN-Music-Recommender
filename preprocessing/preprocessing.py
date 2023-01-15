@@ -15,7 +15,7 @@ import networkx as nx
 import torch
 from torch_geometric.data import Data
 from tqdm import tqdm
-from utils import count_playlists
+from utils.preprocessing import count_playlists
 
 
 def preprocess(source_folder, output_folder, min_followers):
