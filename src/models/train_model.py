@@ -4,7 +4,7 @@ import numpy as np
 from torch_geometric.transforms import RandomLinkSplit
 from torch_geometric.data import Dataset, Data
 from torch_geometric.loader import DataLoader
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 
 from utils.sampling import sample_negative_edges
 

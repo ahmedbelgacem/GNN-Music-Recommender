@@ -7,15 +7,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 ROOT = Path(__file__).parent
-DATA_FOLDER = ROOT / 'data'
-GRAPH = DATA_FOLDER / 'graph.pt'
-PLAYLISTS = DATA_FOLDER / 'playlists.json'
+PROCESSED_FOLDER = ROOT / 'data/processed'
+MODELS_FOLDER = ROOT / 'models'
+GRAPH = PROCESSED_FOLDER / 'graph.pt'
+PLAYLISTS = PROCESSED_FOLDER / 'playlists.json'
 
 NECESSARY_DATA_FILES = (GRAPH, PLAYLISTS)
 
 for necessary_file in NECESSARY_DATA_FILES:
     if not necessary_file.exists():
-        raise Exception(f"File '{necessary_file.name}' is needed in folder {DATA_FOLDER}")
+        raise Exception(f"File '{necessary_file.name}' is needed in folder {PROCESSED_FOLDER}")
 
 mandatory_env_variables = (
     "EPOCHS", "BATCH_SIZE", "LEARNING_RATE", "K", "NUM_LAYERS", "EMBEDDING_DIM")
